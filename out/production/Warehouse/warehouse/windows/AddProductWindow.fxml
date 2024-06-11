@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="191.0" prefWidth="535.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.controllers.AddProductController">
+    <children>
+        <TextField fx:id="categoryField" layoutX="11.0" layoutY="71.0" />
+        <TextField fx:id="nameField" layoutX="11.0" layoutY="31.0" />
+        <TextField fx:id="vendorField" layoutX="193.0" layoutY="31.0" />
+        <TextField fx:id="typeField" layoutX="193.0" layoutY="71.0" />
+        <TextField fx:id="sellPriceField" layoutX="12.0" layoutY="113.0" />
+        <TextField fx:id="quantityField" layoutX="373.0" layoutY="31.0" />
+        <Text layoutX="11.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наименование" />
+        <Text layoutX="192.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Производитель" />
+        <Text layoutX="11.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена продажи" />
+        <Text layoutX="373.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кол-во" />
+        <Text layoutX="11.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Категория товара" />
+        <Text layoutX="192.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип товара" />
+        <Button fx:id="addButton" layoutX="413.0" layoutY="152.0" mnemonicParsing="false" onAction="#add" text="Добавить" />
+        <Button fx:id="cancelButton" layoutX="57.0" layoutY="152.0" mnemonicParsing="false" onAction="#cancel" text="Отмена" />
+    </children>
+</AnchorPane>

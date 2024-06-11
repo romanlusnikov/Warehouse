@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="929.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.controllers.MainController">
+    <children>
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="148.0" prefHeight="471.0" prefWidth="836.0" style="-fx-background-radius: 0;" AnchorPane.bottomAnchor="12.0" AnchorPane.topAnchor="148.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="113.0" text="Наименование" />
+                <TableColumn fx:id="categoryColumn" prefWidth="148.0" text="Категория товара" />
+                <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="124.0" text="Тип" />
+                <TableColumn fx:id="vendorColumn" prefWidth="176.0" text="Производитель" />
+                <TableColumn fx:id="quantityColumn" prefWidth="104.0" text="Количество" />
+                <TableColumn fx:id="sellPriceColumn" prefWidth="172.0" text="Цена" />
+            </columns>
+        </TableView>
+        <ChoiceBox fx:id="choiceboxSearch" layoutX="94.0" layoutY="113.0" prefHeight="25.0" prefWidth="176.0" style="-fx-background-radius: 0;" value="Наименованию" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="113.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Наименованию" />
+                    <String fx:value="Категории" />
+                    <String fx:value="Типу" />
+                    <String fx:value="Производителю" />
+                    <String fx:value="Кол-ву" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <TextField fx:id="searchField" layoutX="543.0" layoutY="113.0" prefHeight="25.0" prefWidth="250.0" promptText="Поиск" style="-fx-background-radius: 0;" AnchorPane.leftAnchor="543.0" AnchorPane.topAnchor="113.0" />
+        <ImageView fitHeight="63.0" fitWidth="81.0" layoutX="24.0" layoutY="22.0" onMouseClicked="#camera" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="22.0">
+            <image>
+                <Image url="@../img/cam.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="50.0" fitWidth="63.0" layoutX="120.0" layoutY="28.0" onMouseClicked="#intercom" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="28.0">
+            <image>
+                <Image url="@../img/free-icon-interphone-1581272.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="57.0" fitWidth="58.0" layoutX="295.0" layoutY="25.0" onMouseClicked="#skud" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="25.0">
+            <image>
+                <Image url="@../img/free-icon-forgot-password-6195696.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="57.0" fitWidth="50.0" layoutX="200.0" layoutY="29.0" onMouseClicked="#network" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="29.0">
+            <image>
+                <Image url="@../img/local.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="63.0" fitWidth="58.0" layoutX="389.0" layoutY="24.0" onMouseClicked="#power" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="389.0" AnchorPane.topAnchor="24.0">
+            <image>
+                <Image url="@../img/free-icon-battery-3960888.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="849.0" layoutY="588.0" onMouseClicked="#updateTable" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="849.0" AnchorPane.topAnchor="588.0">
+            <image>
+                <Image url="@../img/Refresh_36729.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="19.0" layoutY="110.0" prefHeight="31.0" prefWidth="73.0" text="Поиск по:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="860.0" layoutY="203.0" onMouseClicked="#addProduct" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/free-icon-plus-148764.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="860.0" layoutY="279.0" onMouseClicked="#deleteProduct" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/free-icon-minus-243794.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="57.0" layoutX="860.0" layoutY="350.0" onMouseClicked="#editProduct" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/free-icon-edit-tool-1085704.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="31.0" layoutX="808.0" layoutY="110.0" onMouseClicked="#searchOnType" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/free-icon-loupe-428094.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="742.0" layoutY="6.0" prefHeight="31.0" prefWidth="102.0" text="Вы вошли как:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="737.0" layoutY="27.0" prefHeight="31.0" prefWidth="102.0" text="Администратор" textFill="#006aff" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="858.0" layoutY="17.0" mnemonicParsing="false" onAction="#exit" text="Выйти" />
+      <ImageView fitHeight="57.0" fitWidth="53.0" layoutX="684.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/persAdmin.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
